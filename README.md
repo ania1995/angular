@@ -87,6 +87,12 @@
 5.  Pipe
 
 - operatory pipe służa do modyfikowania, filtrowania danych przed ich wyświetleniem
+- pipe przed wyświetleniem danych filtruje, modyfikuje lub zmienia wartość
+- Angular posiada wiele wbudowanych i przydatnych pipes
+- pipe może mieć dodatkowe parametry, które mogą określić sposób działania
+- pipes możemy łączyć ze sobą, trzeba jednak uważać aby typy przesyłane między nimi zgadzały się
+- w Internecie jest mnóstwo gotowych bibliotek z różnymi gotowymi pipes
+- prawdopodobnie jeśli potrzebujesz użyć pipe, ktoś już ją napisał i udostępnił
 - przy interpolacji: `{{title | uppercase}}`
 - parametry:
 - [DatePipe](https://angular.io/api/common/DatePipe)
@@ -131,12 +137,12 @@
       translate | json;
     }
   }
-  /* {zima: 'winter', wiosna: 'spring',jesien: 'autumn',lato: 'summer'
-  } */
+  /* {zima: 'winter', wiosna: 'spring',jesien: 'autumn',lato: 'summer'} */
   ```
 - KeyValuePipe - iterowanie obiektu po jego kluczach
 - SlicePipe
 - PercentPipe
+- NGX PIPE
 
 ## Concepts
 
