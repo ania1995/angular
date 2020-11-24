@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Lista Zadań';
-  price = 12.88;
+  config: { [key: string]: string | Date } = null;
 
-  getFooter(): string {
-    return '© Lista zadań,All rights reserved.';
-  }
-  getDate(): Date {
-    return new Date();
+  constructor() {
+    this.config = {
+      title: 'Lista Zadań',
+      footer: '© Lista zadań,All rights reserved.',
+      date: new Date(),
+    };
   }
 }
