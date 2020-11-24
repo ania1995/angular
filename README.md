@@ -51,3 +51,33 @@
 - app (our code)
 - assets (static files)
 - environments (configuration for application run mode )
+
+## Application Architecture
+
+1. Modules (min 1 in app)
+   1. @NgModule - dekorator - wszytsko co w nim skąłda się na apliakcję angularową
+      - declaration ( deklaracja komponentów, dyrektyw i pipe)
+      - imports ( deklaracja importowanych modułów; mogą być z zew. bibliotek)
+      - providers ( deklaracja o serwisach, dostępny będzie dla całego serwisu, albo komponentu, jeżeli tam będzie zadeklarowany)
+      - bootstrap ( koponent startowy aplikacji)
+
+\* Feature Modules
+
+2.  Services - klasa z dekoratorem Injectable
+    - wykonują zadania dla komponentów i innych części aplikacji
+    - dostarcza dane i pomaga w ich analizie i przetwarzaniu
+    - komonikacja między komponentami
+    - DEKLAROWAĆ w tablicy "providers" ( w dekoratorze aplikacji lub componentu)
+    ```
+    @Injectable({})
+    ```
+3.  Components
+
+    - to klasa zawierająca dekorator komponent
+    - służy do wyświetlania danych
+
+    ```
+    @Component({})
+    ```
+
+    Directives 4. 5. Pipes
