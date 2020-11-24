@@ -84,7 +84,15 @@
     ```
 
 4.  Directives
-5.  Pipes
+5.  Pipe
+
+- operatory pipe służa do modyfikowania, filtrowania danych przed ich wyświetleniem
+- przy interpolacji: `{{title | uppercase}}`
+- parametry:
+- [DatePipe](https://angular.io/api/common/DatePipe)
+- DecimalPipe
+- CurrencyPipe
+- PercentPipe
 
 ## Concepts
 
@@ -93,7 +101,7 @@
    - wyświetla tylko typy proste (prymitywne) jak `boolean, number, string` w formie tekstu
    - wyświetla dane za pomocą podwójnych nawiasów klamrowych – `{‌{}}`
    - nie wyświetlimy za pomocą interpolacji tak złożonych typów jak obiekt
-   - możemy używać dodatkowych wyrażeń w interpolacji np. {‌{(2 + 2 - 1) \* 4}}
+   - możemy używać dodatkowych wyrażeń w interpolacji np. `{‌{(2 + 2 - 1) \* 4}}`
    - interpolacja przede wszystkim powinna służyć do wyświetlania danych, nie do rozwiązywania skomplikowanych wyrażeń
 
 2. Change Detection
