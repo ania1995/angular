@@ -144,6 +144,30 @@
 - PercentPipe
 - NGX PIPE
 
+## \*ngFor
+
+- za pomocą `*ngFor` możemy iterować po listach i obiektach
+- do wyświetlania kluczy i wartości obiektów istnieje specjalny pipe keyvalue
+- `*ngFor` powiela element HTML, na którym jest wstawiony
+- `*ngFor` może powielać także komponenty
+- zmienna wytworzona z `*ngFor` jest dostępna tylko w tym elemencie, na którym jest użyty `*ngFor`
+- `*ngFor` dostarcza nam prosty dostęp do indexu, pierwszego, ostatniego, parzystego i nieparzystego elementu
+- jeśli próbujesz użyć `*ngFor` i nie działa sprawdź czy na pewno iterujesz po obiekcie, który jest iterowalny
+
+```html
+<li *ngFor="let item of weeks; let i = index">{{i}}. {{item}}</li>
+```
+
+```html
+<ng-container *ngFor="let item of weeks; let even = even; let odd= odd">
+  <!-- dalej warunki *ngIf -->
+</ng-container>
+```
+
+```html
+<li *ngFor="let item of weeks | keyvalue">{{item.key}} - {{item.value}}</li>
+```
+
 ## Concepts
 
 1. Interpolacja
