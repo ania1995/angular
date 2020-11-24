@@ -65,7 +65,9 @@
 
 2.  Services - klasa z dekoratorem Injectable
     - wykonują zadania dla komponentów i innych części aplikacji
-    - dostarcza dane i pomaga w ich analizie i przetwarzaniu
+    - dostarcza dane i pomaga w ich analizie i przetwarzaniu danych
+    - wykonuje zapytania HTTP,
+    - sprawdza uprawienia
     - komonikacja między komponentami
     - DEKLAROWAĆ w tablicy "providers" ( w dekoratorze aplikacji lub componentu)
     ```
@@ -75,6 +77,7 @@
 
     - to klasa zawierająca dekorator komponent
     - służy do wyświetlania danych
+    - komunikuje się z użytkownikiem, w tym miejscu powstaje to co widać na ekranie
 
     ```
     @Component({})
