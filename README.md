@@ -83,4 +83,20 @@
     @Component({})
     ```
 
-    Directives 4. 5. Pipes
+4.  Directives
+5.  Pipes
+
+## Concepts
+
+1. Interpolacja
+
+   - wyświetla tylko typy proste (prymitywne) jak `boolean, number, string` w formie tekstu
+   - wyświetla dane za pomocą podwójnych nawiasów klamrowych – `{‌{}}`
+   - nie wyświetlimy za pomocą interpolacji tak złożonych typów jak obiekt
+   - możemy używać dodatkowych wyrażeń w interpolacji np. {‌{(2 + 2 - 1) \* 4}}
+   - interpolacja przede wszystkim powinna służyć do wyświetlania danych, nie do rozwiązywania skomplikowanych wyrażeń
+
+2. Change Detection
+   - uruchamiane przy jakiejkolwiek zmianie komponentu
+   - renderowanie komponentu przy każdym wywołaniu setTimout, setInterval
+   - widok HTML jest odświeżany tylko po operacjach asynchronicznych (zdarzenia na stronie, HTTP) i wtedy pokazuje zmienione dane
