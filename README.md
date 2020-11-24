@@ -182,3 +182,34 @@
    - uruchamiane przy jakiejkolwiek zmianie komponentu
    - renderowanie komponentu przy każdym wywołaniu setTimout, setInterval
    - widok HTML jest odświeżany tylko po operacjach asynchronicznych (zdarzenia na stronie, HTTP) i wtedy pokazuje zmienione dane
+
+## Data Binding
+
+- synchrnizacja danych między klasą konponentu i HTML
+- One-way Binding
+
+  1. Event Binding
+
+     - HTML -> Klasa Komponentu
+
+       ```html
+       <button (click)="cleartList()"></button>
+       ```
+
+  2. Property Binding
+
+     - Klasa Komponentu -> HTML
+
+     ```html
+     <p>Witaj {{title}}</p>
+     <input type="text" [value]="task.name" />
+     <button [disabled]="true">Wyślij</button>
+     ```
+
+- Two-way Binding
+
+  - HTML <-> Klasa Komponentu
+
+    ```html
+    <input type="text" [(value)]="task.name" />
+    ```
