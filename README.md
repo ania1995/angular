@@ -14,7 +14,7 @@
 
 - Run server
   ```
-  ng server
+  ng serve
   ```
 
 ## Aplication Project Structure
