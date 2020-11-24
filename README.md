@@ -90,8 +90,52 @@
 - przy interpolacji: `{{title | uppercase}}`
 - parametry:
 - [DatePipe](https://angular.io/api/common/DatePipe)
-- DecimalPipe
+- [DecimalPipe](https://angular.io/api/common/DecimalPipe)
+  - | number
+  - | number: 1.0-0
+- UppercasePipe, LowerCasePipe, TitlePipe
+- I18nSelectPipe
+  ```js
+  translate: {
+      zima: 'winter',
+      wiosna: 'spring',
+      jesien: 'autumn',
+      lato: 'summer'
+  }
+  ```
+  ```js
+  {{'zima' |i18nSelect: translate}} // winter
+  ```
 - CurrencyPipe
+
+  ```js
+  price = 12.88;
+  ```
+
+  ```js
+  {{ price | currency: "PLN" }} //12.88 zł
+  ```
+
+- JsonPipe
+  ```js
+  translate: {
+      zima: 'winter',
+      wiosna: 'spring',
+      jesien: 'autumn',
+      lato: 'summer'
+  }
+  ```
+  ```js
+  {
+    {
+      translate | json;
+    }
+  }
+  /* {zima: 'winter', wiosna: 'spring',jesien: 'autumn',lato: 'summer'
+  } */
+  ```
+- KeyValuePipe - iterowanie obiektu po jego kluczach
+- SlicePipe
 - PercentPipe
 
 ## Concepts

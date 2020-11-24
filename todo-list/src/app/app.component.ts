@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lista Zadań';
+  price = 12.88;
 
   getFooter(): string {
     return '© Lista zadań,All rights reserved.';

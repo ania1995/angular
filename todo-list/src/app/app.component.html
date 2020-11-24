@@ -45,6 +45,7 @@
     <div class="footer-copyright">
       <div class="container">
         {{ getDate() | date: "yyyy" }} {{ getFooter() }}
+        {{ price | currency: "PLN" }}
       </div>
     </div>
   </footer>
