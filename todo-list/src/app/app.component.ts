@@ -1,4 +1,6 @@
+import { dataTask } from './data';
 import { Component } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   config: { [key: string]: string | Date } = null;
+  tasks: Task[] = dataTask;
 
   constructor() {
     this.config = {
