@@ -213,3 +213,37 @@
     ```html
     <input type="text" [(value)]="task.name" />
     ```
+
+## Deploy Angular Apps to GitHub Pages
+
+[source page](https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4)
+
+1. Run Build
+
+   Before you can deploy an Angular App, you need to build your angular app for use in production.
+
+   This simply means configuring your app to be useable on a remote server like gh-pages.
+
+   Usually, while creating your App, you had it running on your local server, but unfortunately the configuration for the local server will not serve the application when it is deployed on the gh-pages remote server, which is why you need to build your app.
+
+   Run this command on your terminal to build the application:
+
+   ```
+   $ ng build --prod --base-href "https://GithubUserName.github.io/GithubRepoName/"
+   ```
+
+   Note: Make sure you put in your Github username in “GithubUserName” and the repository name you created in “GithubRepoName” sections of the URL.
+
+2. Deploy to gh-pages
+
+   After building the App, you can now deploy it to Github Pages using the angular-cli-ghpages tool.
+
+   Run the command below in your terminal to deploy the App:
+
+   ```
+   $ npx angular-cli-ghpages --dir=dist/Project-name
+   ```
+
+   Note: Make sure you put the name of the project in the place of “Project-name” in the command above.
+
+   You can find this in the angular.json file under defaultProject which is at the bottom of the file. If the project name is wrong, your App will not work; so if you are seeing any errors, check the angular.json to confirm if you used the correct project name.
